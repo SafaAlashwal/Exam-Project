@@ -1,0 +1,37 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>My Page</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for doc in doc_list %}
+      <tr>
+        <td>{{ doc.question }}</td>
+        <td>{{ doc.subject }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <button onclick="saveWord()">Save Word</button>
+</div>
+
+<script>
+  function saveWord() {
+    frappe.call({
+      method: "app_name.app_name.my_page.save_word",
+      callback: function (r) {
+        if (r.message) {
+          frappe.msgprint("Word saved successfully.");
+        }
+      }
+    });
+  }
+</script>
+{% endblock %}

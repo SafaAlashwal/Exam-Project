@@ -1,0 +1,8 @@
+# Copyright (c) 2024, Exam Managment and contributors
+# For license information, please see license.txt
+
+# import frappe
+from frappe.model.document import Document
+
+class CustomDocType(Document):
+	pass

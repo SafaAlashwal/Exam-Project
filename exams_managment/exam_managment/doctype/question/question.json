@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:question",
+ "creation": "2023-12-31 00:17:09.174770",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "doctor_name",
+  "chapter",
+  "question",
+  "answer",
+  "type_question",
+  "mark",
+  "degree_complex"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Data",
+   "label": "Question",
+   "unique": 1
+  },
+  {
+   "fieldname": "degree_complex",
+   "fieldtype": "Rating",
+   "label": "Degree Complex"
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Table",
+   "label": "Answer",
+   "options": "Answer List"
+  },
+  {
+   "fetch_from": "bank_name.doctor_name",
+   "fieldname": "doctor_name",
+   "fieldtype": "Table",
+   "label": "Doctor Name",
+   "options": "Doctor Subject"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Subject"
+  },
+  {
+   "default": "2",
+   "fieldname": "mark",
+   "fieldtype": "Float",
+   "label": "Mark"
+  },
+  {
+   "fieldname": "chapter",
+   "fieldtype": "Link",
+   "label": "Chapter",
+   "options": "Chapter"
+  },
+  {
+   "fieldname": "type_question",
+   "fieldtype": "Select",
+   "label": "Type Question"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-26 16:59:16.534461",
+ "modified_by": "Administrator",
+ "module": "Exam Managment",
+ "name": "Question",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

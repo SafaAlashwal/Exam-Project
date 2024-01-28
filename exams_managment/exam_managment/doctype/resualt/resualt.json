@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-31 00:18:34.914696",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resualt",
+  "user"
+ ],
+ "fields": [
+  {
+   "fieldname": "resualt",
+   "fieldtype": "Data",
+   "label": "Resualt"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-05 21:46:00.891419",
+ "modified_by": "Administrator",
+ "module": "Exam Managment",
+ "name": "Resualt",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

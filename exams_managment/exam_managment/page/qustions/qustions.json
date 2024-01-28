@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2023-12-31 00:45:47.421652",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-12-31 00:45:47.421652",
+ "modified_by": "Administrator",
+ "module": "Exam Managment",
+ "name": "qustions",
+ "owner": "Administrator",
+ "page_name": "qustions",
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

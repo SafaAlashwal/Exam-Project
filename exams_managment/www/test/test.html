@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>≈÷«›… »Ì«‰«  ≈·Ï Frappe ERPNext</title>
+  <link rel="stylesheet" href="/assets/exams_managment/qustions/css/bootstrap.min_1.css" />
+  <link rel="stylesheet" href="/assets/exams_managment/qustions/css/my_style.css" />
+  <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/desk.bundle.KJGLFD7N.css">
+  <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/report.bundle.5PUXEBMO.css">
+  <link type="text/css" rel="stylesheet" href="/assets/erpnext/dist/css/erpnext.bundle.KDXL3XJY.css">
+
+</head>
+
+<body>
+  <h1>≈÷«›… »Ì«‰« </h1>
+  <form id="dataForm">
+    <label for="name">«·«”„:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="email">«·»—Ìœ «·≈·ﬂ —Ê‰Ì:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <button type="submit">≈—”«·</button>
+  </form>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/libs.bundle.5QWQF2M7.js"></script>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/desk.bundle.IDT5ENJY.js"></script>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/list.bundle.AXLUAJJO.js"></script>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/form.bundle.SWPMHKVM.js"></script>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/controls.bundle.SDP5JJGN.js"></script>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/report.bundle.ROFZBQKT.js"></script>
+
+  <script type="text/javascript" src="/assets/frappe/dist/js/telemetry.bundle.ESRPVZ24.js"></script>
+
+  <script type="text/javascript" src="/assets/erpnext/dist/js/erpnext.bundle.WLIHRNBV.js"></script>
+
+
+  <script>
+
+    document.getElementById("dataForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // „‰⁄ ≈—”«· «·‰„Ê–Ã
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+
+      // ≈—”«· «·»Ì«‰«  ≈·Ï «·Œ«œ„
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/add_data", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          alert(" „  ≈÷«›… «·»Ì«‰«  »‰Ã«Õ!");
+          // ﬁ„ » ‰›Ì– √Ì ≈Ã—«¡«  ≈÷«›Ì… »⁄œ «·‰Ã«Õ
+        }
+      };
+      var data = JSON.stringify({name: name, email: email});
+      xhr.send(data);
+    });
+  </script>
+</body>
+</html>

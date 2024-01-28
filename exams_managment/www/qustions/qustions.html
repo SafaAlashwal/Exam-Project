@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/exams_managment/questions/css/my_style.css" />
+
+
+  <title>Question Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>{{ questions.subject }}</h2>
+    <h2>{{ questions.department }}</h2>
+    {% for q in view %}
+    <div class="question">
+      <h5>Question {{ loop.index }}</h5>
+      <p>{{ q["question"] }}</p>
+      <div class="options">
+        {% for p in q["answer"] %}
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="question{{ q }}" value="{{ p['answer'] }}">
+          <label class="form-check-label" for="question{{ q }}">{{ p['answer'] }}</label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" id="Send" class="btn btn-primary btn-block">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script>
+    document.querySelector("#Send").addEventListener('click', (e) => {
+      const options = document.querySelectorAll('.options');
+      let output = "";
+
+      options.forEach((option, index) => {
+        const selectedOption = option.querySelector('input[type="radio"]:checked');
+        if (selectedOption) {
+          const selectedContent = selectedOption.value;
+          output += `Question ${index + 1}: ${selectedContent}\n`;
+        }
+      });
+
+      console.log(output);
+
+
+      frappe.call({
+        method: 'save_selected_value',
+        args: {
+          selected_value: selectedContent,
+        },
+        callback: function (response) {
+          console.log(response);
+        }
+      })
+
+    });
+  </script>
+</body>
+
+</html>

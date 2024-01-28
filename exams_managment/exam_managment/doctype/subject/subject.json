@@ -1,0 +1,61 @@
+{
+ "_comments": "[{\"comment\": \"Action Failed<br><br>Option <strong>Question</strong> for field <strong>question</strong> is not ...\", \"by\": \"Administrator\", \"name\": \"ce127b0307\"}, {\"comment\": \"Action Failed<br><br>Option <strong>Question</strong> for field <strong>question</strong> is not ...\", \"by\": \"Administrator\", \"name\": \"4b4576ab2a\"}]",
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:subject",
+ "creation": "2023-12-31 00:15:49.449888",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "name_doctor",
+  "chapter_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_doctor",
+   "fieldtype": "Table",
+   "label": "Doctor Name",
+   "options": "Doctor Subject"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "unique": 1
+  },
+  {
+   "fieldname": "chapter_name",
+   "fieldtype": "Table",
+   "label": "Chapter Name",
+   "options": "Chapter"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-25 20:47:03.574496",
+ "modified_by": "Administrator",
+ "module": "Exam Managment",
+ "name": "Subject",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:department",
+ "creation": "2024-01-20 23:13:59.487551",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "collage",
+  "department",
+  "level",
+  "subject",
+  "test_degree",
+  "test_type",
+  "question"
+ ],
+ "fields": [
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "unique": 1
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "1\n2\n3\n4"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Subject"
+  },
+  {
+   "fieldname": "test_degree",
+   "fieldtype": "Float",
+   "label": "Test Degree"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Table",
+   "label": "Question",
+   "options": "Question median"
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Data",
+   "label": "Test Type"
+  },
+  {
+   "fieldname": "collage",
+   "fieldtype": "Link",
+   "label": "Collage",
+   "options": "Collage"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-27 21:07:07.520344",
+ "modified_by": "Administrator",
+ "module": "Exam Managment",
+ "name": "Review Test",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
